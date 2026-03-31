@@ -1,0 +1,4 @@
+allow_images=true
+width = 625
+#height = 25%
+lines = 10

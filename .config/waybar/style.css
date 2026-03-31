@@ -1,0 +1,97 @@
+@import "mocha.css";
+
+* {
+    font-family: "NotoSans Nerd Font";
+    font-size: 14px;
+    font-weight: 500;
+    min-height: 0;
+}
+
+window#waybar {
+    background: transparent;
+    color: @text;
+    margin: 5px;
+}
+
+/* Modules styling */
+#workspaces,
+#window,
+#cpu,
+#memory,
+#network,
+#pulseaudio,
+#clock,
+#battery,
+#tray,
+#custom-spotify {
+    background-color: rgba(49, 50, 68, 0.7);
+    padding: 0 15px;
+    margin: 0 5px;
+    border-radius: 15px;
+    color: @text;
+}
+
+/* Specific Module Colors (Icons/Text) */
+#workspaces button {
+    padding: 0 5px;
+    color: @overlay0;
+    background: transparent;
+    border-radius: 15px;
+}
+
+#workspaces button.active {
+    color: @mauve;
+}
+
+#workspaces button.urgent {
+    color: @red;
+}
+
+#workspaces button:hover {
+    background: @surface1;
+    color: @mauve;
+}
+
+#window {
+    color: @lavender;
+}
+
+#cpu {
+    color: @sapphire;
+}
+
+#memory {
+    color: @blue;
+}
+
+#pulseaudio {
+    color: @mauve;
+}
+
+#network {
+    color: @teal;
+}
+
+#clock {
+    color: @red;
+}
+
+#battery {
+    color: @green;
+}
+
+#battery.warning {
+    color: @peach;
+}
+
+#battery.critical {
+    color: @red;
+}
+
+#custom-spotify {
+    color: @green;
+}
+
+#tray {
+    padding: 0 10px;
+}
