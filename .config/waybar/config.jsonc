@@ -1,0 +1,57 @@
+{
+  "position": "top",
+  "modules-left": ["hyprland/workspaces"],
+  "modules-center": ["hyprland/window"],
+  "modules-right": ["cpu", "memory", "network", "pulseaudio", "clock", "battery"],
+  "clock": {
+    "format": "<span font='icon'></span> {:%a %d %I:%M %p}",
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+  },
+  "cpu": {
+    "format": "  {usage}%",
+    "interval": 2,
+    "tooltip": true,
+    "tooltip-format": "CPU Usage: {usage}%\nLoad: {load}"
+  },
+  "memory": {
+    "format": "  {percentage}%",
+    "interval": 2,
+    "tooltip": true,
+    "tooltip-format": "RAM: {used:0.1f}G / {total:0.1f}G ({percentage}%)\nSwap: {swapUsed}G / {swapTotal}G"
+  },
+  "battery": {
+    "states": {
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "{icon} {capacity}%",
+    "format-warning": "{icon}  {capacity}%",
+    "format-critical": "{icon}  {capacity}%",
+    "format-charging": "{icon}  {capacity}%",
+    "format-plugged": "{icon}  {capacity}%",
+    "format-alt": "{icon} {time}",
+    "format-full": "{icon} {capacity}%",
+    "format-icons": ["", "", "", "", ""],
+    "tooltip-format": "{time}"
+  },
+  "network": {
+    "format-wifi": "   {essid}",
+    "format-ethernet": "󰈁  Connected",
+    "format-linked": " {ifname} (No IP)",
+    "format-disconnected": "  Disconnected",
+    "tooltip-format": "Interface: {ifname}\nIP: {ipaddr}\nGateway: {gwaddr}",
+    "tooltip-format-wifi": "Network: {essid}\nSignal: {signalStrength}%\nFrequency: {frequency}MHz\nIP: {ipaddr}\n↓ {bandwidthDownBytes} ↑ {bandwidthUpBytes}",
+    "tooltip-format-ethernet": "Interface: {ifname}\nIP: {ipaddr}\n↓ {bandwidthDownBytes} ↑ {bandwidthUpBytes}",
+    "interval": 2,
+    "on-click": "uwsm app -- kitty -e impala"
+  },
+  "pulseaudio": {
+      "format": "{icon} {volume}%",
+      "format-muted": "  {volume}%",
+      "format-icons": {
+          "muted":" ",
+          "default": ["󰕿", "󰖀", "󰕾"]
+      },
+      "on-click": "pavucontrol"
+  }
+}
